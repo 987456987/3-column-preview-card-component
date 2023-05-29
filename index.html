@@ -29,14 +29,30 @@
 
     body{
       min-height: 100vh;
-      border: solid;
       display: grid;
       place-content: center;
     }
 
     .component{
+      max-width: 80vw;
+      display: flex;
+      background-color: var(--headColor);
+    }
+
+    .card {
+      max-width: 18em;
+      padding: 2em;
+      background-color: var(--primary1);
+
       font-family: 'Lexend Deca', sans-serif;
-      font-size: 15px;
+      font-size: 1.3em;
+      color: var(--textColor);
+    }
+    .card:nth-of-type(2){
+      background-color: var(--primary2);
+    }
+    .card:nth-of-type(3){
+      background-color: var(--primary3);
     }
 
     .head {
@@ -44,10 +60,28 @@
       text-transform: uppercase;
     }
 
-    .card {
-      max-width: 250px;
+    .button {
+      font-size: 1em;
+      font-family: 'Lexend Deca', sans-serif;
+
+      padding: .8em 1.5em;
+
+      background-color: var(--headColor);
+
+      border-radius: 50px;
+      border: none;
     }
-    
+
+    .button1 {
+      color: var(--primary1);
+    }
+    .button2 {
+      color: var(--primary2);
+    }
+    .button3 {
+      color: var(--primary3);
+    }
+   
   </style>
 
 </head>
@@ -58,31 +92,23 @@
       <h2 class="head">Sedans</h2>
       <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
         or on your next road trip.</p>
-      <button class="button">Learn More</button>
+      <button class="button button1">Learn More</button>
     </div>
     <div class="card">
       <img src="images/icon-suvs.svg">
       <h2 class="head">SUVs</h2>
       <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
         and off-road adventures.</p>
-      <button class="button">Learn More</button>
+      <button class="button button2">Learn More</button>
     </div>
     <div class="card">
       <img src="images/icon-luxury.svg">
       <h2 class="head">Luxury</h2>
       <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
         rental and arrive in style.</p>
-      <button class="button">Learn More</button>
+      <button class="button  button3">Learn More</button>
     </div>
   </main>
-
-
-  <!-- 
   
-
-  
-   -->
-  
- 
 </body>
 </html>
