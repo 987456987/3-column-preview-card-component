@@ -27,43 +27,72 @@
       padding: 0;
     }
 
+/*///////////////////
+  Layout
+///////////////////*/
+
     body{
       min-height: 100vh;
       display: grid;
       place-content: center;
-    }
-
-    .component{
-      max-width: 80vw;
-      display: flex;
       background-color: var(--headColor);
     }
 
+    .component{
+      max-width: 1200px;
+      display: flex;
+    }
+
+    img {
+      width: 4.5em;
+    }
+    /*///////////////////
+      Card
+    ///////////////////*/
     .card {
-      max-width: 18em;
-      padding: 2em;
-      background-color: var(--primary1);
+      max-width: 22em;
+      padding: 4em;
+      padding-right: 4em;
+      
 
       font-family: 'Lexend Deca', sans-serif;
-      font-size: 1.3em;
+      font-size: 15px;
       color: var(--textColor);
+    }
+    .card:nth-of-type(1){
+      background-color: var(--primary1);
+      border-radius: 10px 0 0 10px;
     }
     .card:nth-of-type(2){
       background-color: var(--primary2);
     }
     .card:nth-of-type(3){
       background-color: var(--primary3);
+      border-radius: 0 10px 10px 0;
+    }
+
+    .card > * {
+      padding: .5em 0;
     }
 
     .head {
       font-family: 'Big Shoulders Display', cursive;
       text-transform: uppercase;
+      font-size: 2.75em;
     }
 
+    .card p{
+      line-height: 2em;
+    }
+/*///////////////////
+  Button
+///////////////////*/
     .button {
-      font-size: 1em;
+      font-size: 18px;
       font-family: 'Lexend Deca', sans-serif;
 
+      margin-top: 3em;
+      margin-bottom: .5em;
       padding: .8em 1.5em;
 
       background-color: var(--headColor);
@@ -81,7 +110,37 @@
     .button3 {
       color: var(--primary3);
     }
+
+    .button:hover {
+      background-color: transparent;
+      color: var(--headColor);
+      outline: 2px solid var(--headColor);
+      cursor: pointer;
+    }
    
+
+    /*///////////////////
+      Media Query
+    ///////////////////*/
+    @media (max-width: 800px){
+      .component{
+        flex-direction: column;
+      }
+      .card{
+        max-width: 100%;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+      .card:nth-of-type(1){
+        margin-top: 4em;
+        border-radius: 10px 10px 0 0;
+      }
+      .card:nth-of-type(3){
+        margin-bottom: 4em;
+        border-radius: 0 0 10px 10px;
+      }
+    }
+
   </style>
 
 </head>
